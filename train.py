@@ -21,7 +21,7 @@ def main():
     model.fit(X_train, y_train)
 
     # Save model
-    os.makedirs("artifacts", exist_ok=True)
+    os.makedirs("artifacts", exist_ok=False)
     model_path = os.path.join("artifacts", "model.pkl")
     joblib.dump(model, model_path)
 
